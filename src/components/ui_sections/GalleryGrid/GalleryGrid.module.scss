@@ -1,0 +1,12 @@
+@use "@/styles/variables.scss" as *;
+
+.galleryGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+  margin: 40px $page-padding;
+  background-color: #f6f6f6;
+  padding: 56px 50px;
+  border-radius: 25px;
+}

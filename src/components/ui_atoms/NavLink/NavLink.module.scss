@@ -1,0 +1,16 @@
+@use "@/styles/variables.scss" as *;
+
+.navLink {
+  &__link {
+    text-decoration: none;
+    color: #000;
+    font-family: $font-family-primary;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
