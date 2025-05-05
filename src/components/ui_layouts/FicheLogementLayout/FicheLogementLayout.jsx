@@ -69,7 +69,7 @@ function FicheLogementLayout() {
             title="Description"
             content={logement.description}
             content_list={[]}
-            size="small"
+            size="medium"
           />
         </div>
         <div className={styles.container__dropdowns__equipments}>
@@ -77,7 +77,7 @@ function FicheLogementLayout() {
             title="Equipements"
             content=""
             content_list={logement.equipments}
-            size="small"
+            size="medium"
           />
         </div>
       </div>

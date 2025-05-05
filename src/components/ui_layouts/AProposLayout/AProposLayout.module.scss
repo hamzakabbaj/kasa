@@ -1,11 +1,18 @@
 @use "@/styles/variables.scss" as *;
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .dropDownContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: calc(100% - 2 * $page-padding);
+  width: 80%;
   padding: 40px $page-padding;
   gap: 30px;
 }

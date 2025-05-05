@@ -6,12 +6,20 @@ import { useState } from "react";
 function DropDown({ title, content_list, content, size }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Validate that size is one of the allowed values
+  if (size !== "small" && size !== "medium" && size !== "large") {
+    console.warn(
+      `Invalid size prop "${size}" for DropDown component. Using default "small" instead.`
+    );
+    size = "small";
+  }
+
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className={styles.dropDown}>
+    <div className={`${styles.dropDown} ${styles[size]}`}>
       <div className={styles.dropDown__button}>
         <h2 className={styles.dropDown__button__title}>{title}</h2>
         <FontAwesomeIcon
