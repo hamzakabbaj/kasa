@@ -1,0 +1,15 @@
+@use "@/styles/variables" as *;
+
+.container {
+  display: flex;
+  gap: 1rem;
+
+  &__star {
+    color: $color-primary;
+    font-size: 1.3rem;
+  }
+
+  &__star__empty {
+    color: #e3e3e3;
+  }
+}

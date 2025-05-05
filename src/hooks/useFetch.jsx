@@ -12,6 +12,8 @@ const useFetch = (url) => {
         const data = await response.json();
         setData(data);
         setIsLoading(false);
+        // save data to local storage
+        localStorage.setItem("data", JSON.stringify(data));
       } catch (error) {
         setError(error);
         setIsLoading(false);
@@ -23,4 +25,12 @@ const useFetch = (url) => {
   return { data, isLoading, error };
 };
 
+const useFetchLogement = (id) => {
+  const logements = JSON.parse(localStorage.getItem("data"));
+  console.log(logements);
+  const logement = logements.find((logement) => logement.id === id);
+  return { logement };
+};
+
 export default useFetch;
+export { useFetchLogement };

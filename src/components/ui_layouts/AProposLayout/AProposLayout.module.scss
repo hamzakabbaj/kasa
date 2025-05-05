@@ -1,0 +1,11 @@
+@use "@/styles/variables.scss" as *;
+
+.dropDownContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 2 * $page-padding);
+  padding: 40px $page-padding;
+  gap: 30px;
+}

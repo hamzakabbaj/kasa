@@ -1,13 +1,7 @@
 import LocationCard from "@/components/ui_molecules/LocationCard/LocationCard";
-import useFetch from "@/hooks/useFetch";
 import styles from "./GalleryGrid.module.scss";
-function GalleryGrid() {
-  const {
-    data: logements,
-    isLoading,
-    error,
-  } = useFetch("/data/logements.json");
 
+function GalleryGrid({ logements, isLoading, error }) {
   if (isLoading) {
     return <div>Loading...</div>;
   }

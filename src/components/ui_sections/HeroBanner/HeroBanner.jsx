@@ -1,18 +1,26 @@
-import Image from "@/components/ui_atoms/Image/Image";
-import heroBanner from "@/assets/images/hero/hero-banner.jpg";
 import styles from "./HeroBanner.module.scss";
+import PropTypes from "prop-types";
 
-function HeroBanner() {
+function HeroBanner({ title, image, opacity = 0.6 }) {
   return (
     <div className={styles.heroBanner}>
       <div className={styles.titleWrapper}>
-        <h1>Chez vous, partout et ailleurs</h1>
+        <h1>{title}</h1>
       </div>
-      <div className={styles.imageWrapper}>
-        <img src={heroBanner} alt="Hero Banner" />
+      <div
+        className={styles.imageWrapper}
+        style={{ "--overlay-opacity": opacity }}
+      >
+        <img src={image} alt="Hero Banner" />
       </div>
     </div>
   );
 }
+
+HeroBanner.propTypes = {
+  title: PropTypes.string,
+  image: PropTypes.string.isRequired,
+  opacity: PropTypes.number,
+};
 
 export default HeroBanner;

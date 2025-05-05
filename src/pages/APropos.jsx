@@ -1,5 +1,7 @@
+import AProposLayout from "@/components/ui_layouts/AProposLayout/AproposLayout";
+
 function APropos() {
-  return <div>A Propos</div>;
+  return <AProposLayout />;
 }
 
 export default APropos;
