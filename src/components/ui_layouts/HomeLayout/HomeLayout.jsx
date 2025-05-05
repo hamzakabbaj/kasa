@@ -5,7 +5,7 @@ function HomeLayout() {
   return (
     <div>
       <HeroBanner />
-      <GalleryGrid logements={[]} />
+      <GalleryGrid />
     </div>
   );
 }

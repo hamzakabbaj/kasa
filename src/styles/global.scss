@@ -1,6 +1,9 @@
 // Global styles or typography
+@use "@/styles/variables.scss" as *;
 
 body {
-  font-family: "Montserrat", sans-serif;
   margin: 0;
+}
+* {
+  font-family: $font-family-primary;
 }
