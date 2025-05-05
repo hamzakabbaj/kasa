@@ -44,25 +44,28 @@ function FicheLogementLayout() {
         </div>
       </div>
       <div className={styles.container__info}>
-        <div className={styles.container__info__left}>
-          <h1>{logement.title}</h1>
-          <p>{logement.location}</p>
+        <div className={styles.container__info__base}>
+          <div className={styles.container__info__base__title}>
+            <h1>{logement.title}</h1>
+            <p>{logement.location}</p>
+          </div>
+          <div className={styles.container__info__base__tags}>
+            {logement.tags.map((tag) => (
+              <p key={tag}>{tag}</p>
+            ))}
+          </div>
         </div>
-        <div className={styles.container__info__right}>
-          <p>{logement.host.name}</p>
-          <img src={logement.host.picture} alt={logement.host.name} />
+        <div className={styles.container__info__host}>
+          <div className={styles.container__info__host__identity}>
+            <p>{logement.host.name}</p>
+            <img src={logement.host.picture} alt={logement.host.name} />
+          </div>
+          <div className={styles.container__info__host__rating}>
+            <StarsRating rating={logement.rating} />
+          </div>
         </div>
       </div>
-      <div className={styles.container__tags_and_stars}>
-        <div className={styles.container__tags_and_stars__tags}>
-          {logement.tags.map((tag) => (
-            <p key={tag}>{tag}</p>
-          ))}
-        </div>
-        <div className={styles.container__tags_and_stars__stars}>
-          <StarsRating rating={logement.rating} />
-        </div>
-      </div>
+
       <div className={styles.container__dropdowns}>
         <div className={styles.container__dropdowns__description}>
           <DropDown

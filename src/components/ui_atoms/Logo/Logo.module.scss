@@ -7,4 +7,13 @@
     width: 210px;
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    &__small {
+      width: 122px;
+    }
+    &__large {
+      width: 145px;
+    }
+  }
 }

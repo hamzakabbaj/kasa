@@ -4,8 +4,11 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: calc(100% - $page-padding * 2);
-  padding: 0 $page-padding;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 
   &__carrousel {
     position: relative;
@@ -14,11 +17,19 @@
     min-height: 400px;
     overflow: hidden;
 
+    @media (max-width: 768px) {
+      min-height: 255px;
+    }
+
     & img {
       width: 100%;
       height: 100%;
       border-radius: 25px;
       object-fit: cover;
+
+      @media (max-width: 768px) {
+        border-radius: 10px;
+      }
     }
 
     &__buttons {
@@ -36,6 +47,10 @@
         color: white;
         cursor: pointer;
         z-index: 1;
+
+        @media (max-width: 768px) {
+          font-size: 24px;
+        }
       }
     }
   }
@@ -45,59 +60,100 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    &__left {
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__base {
       display: flex;
       flex-direction: column;
       gap: 1rem;
 
-      & h1 {
-        font-size: 36px;
-        font-weight: 500;
-        color: $color-primary;
-        margin: 0;
+      &__title {
+        & h1 {
+          font-size: 36px;
+          font-weight: 500;
+          color: $color-primary;
+          margin: 0;
+
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
+        }
+
+        & p {
+          font-size: 18px;
+          margin: 0;
+
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
+        }
       }
 
-      & p {
-        font-size: 18px;
-        margin: 0;
+      &__tags {
+        display: flex;
+        gap: 1rem;
+
+        & p {
+          font-size: 14px;
+          color: white;
+          background-color: $color-primary;
+          padding: 0.5rem 1rem;
+          border-radius: 10px;
+          min-width: 115px;
+          text-align: center;
+          font-weight: 700;
+
+          @media (max-width: 768px) {
+            font-size: 10px;
+            min-width: 84px;
+            border-radius: 5px;
+          }
+        }
       }
     }
 
-    &__right {
+    &__host {
       display: flex;
-      gap: 1rem;
+      flex-direction: column;
+      gap: 2rem;
       align-items: center;
-      & p {
-        font-size: 18px;
-        margin: 0;
-        color: $color-primary;
+
+      @media (max-width: 768px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
       }
 
-      & img {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-      }
-    }
-  }
+      &__identity {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
 
-  &__tags_and_stars {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        & p {
+          font-size: 18px;
+          margin: 0;
+          color: $color-primary;
 
-    &__tags {
-      display: flex;
-      gap: 1rem;
+          @media (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
 
-      & p {
-        font-size: 14px;
-        color: white;
-        background-color: $color-primary;
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-        min-width: 115px;
-        text-align: center;
+        & img {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+
+          @media (max-width: 768px) {
+            width: 32px;
+            height: 32px;
+          }
+        }
       }
     }
   }
@@ -108,6 +164,12 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 4rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
 
     &__description {
       width: 100%;

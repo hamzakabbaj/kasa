@@ -4,9 +4,17 @@
   display: flex;
   gap: 1rem;
 
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
+
   &__star {
     color: $color-primary;
     font-size: 1.3rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
   }
 
   &__star__empty {

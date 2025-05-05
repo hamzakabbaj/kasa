@@ -5,7 +5,7 @@ function Error404() {
     <div className={styles.error404}>
       <h1 className={styles.error404__title}>404</h1>
       <p className={styles.error404__text}>
-        Oups! La page que vous cherchez n'existe pas.
+        Oups! La page que vous demandez n'existe pas.
       </p>
       <Link to="/" className={styles.error404__link}>
         Retourner sur la page d’accueil

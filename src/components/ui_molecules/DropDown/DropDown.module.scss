@@ -17,6 +17,10 @@
     .dropDown__button {
       &__title {
         font-size: 18px;
+
+        @media (max-width: 768px) {
+          font-size: 13px;
+        }
       }
     }
   }
@@ -25,6 +29,10 @@
     .dropDown__button {
       &__title {
         font-size: 24px;
+
+        @media (max-width: 768px) {
+          font-size: 13px;
+        }
       }
     }
   }
@@ -63,6 +71,10 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
 
     & p {
       padding: 70px 20px 20px 20px;

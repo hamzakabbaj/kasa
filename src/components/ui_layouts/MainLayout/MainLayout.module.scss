@@ -1,0 +1,9 @@
+@use "@/styles/variables.scss" as *;
+
+.mainLayout {
+  padding: 40px $page-padding 0px $page-padding;
+
+  @media (max-width: 768px) {
+    padding: 20px $page-padding-mobile 0px $page-padding-mobile;
+  }
+}

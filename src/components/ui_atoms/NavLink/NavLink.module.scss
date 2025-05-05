@@ -8,6 +8,11 @@
     font-weight: 500;
     line-height: 143%;
     letter-spacing: 0.02em;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+
     &:hover {
       text-decoration: underline;
     }
