@@ -33,6 +33,10 @@ function DropDown({ title, content_list, content, size }) {
           isOpen ? styles.dropDown__content__open : ""
         }`}
       >
+        <br />
+        <br />
+        <br />
+
         {content_list.map((content, index) => (
           <p key={index} className={styles.dropDown__content__text}>
             {content}
