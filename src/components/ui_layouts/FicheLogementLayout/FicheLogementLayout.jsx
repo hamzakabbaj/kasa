@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import StarsRating from "@/components/ui_molecules/StarsRating/StarsRating";
+import NotFound from "@/pages/NotFound.jsx";
 import {
   faChevronLeft,
   faChevronRight,
@@ -13,7 +14,11 @@ import { useEffect } from "react";
 function FicheLogementLayout() {
   const { id } = useParams();
   const { logement } = useFetchLogement(id);
+  if (!logement) {
+    return <NotFound />;
+  }
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const [currentImage, setCurrentImage] = useState(logement.pictures[0]);
   console.log(logement);
 
