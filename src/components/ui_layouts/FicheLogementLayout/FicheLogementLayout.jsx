@@ -30,18 +30,20 @@ function FicheLogementLayout() {
     <div className={styles.container}>
       <div className={styles.container__carrousel}>
         <img src={currentImage} alt={logement.title} />
-        <div className={styles.container__carrousel__buttons}>
-          <FontAwesomeIcon
-            className={styles.container__carrousel__buttons__button}
-            icon={faChevronLeft}
-            onClick={() => setCurrentIndex(currentIndex - 1)}
-          />
-          <FontAwesomeIcon
-            className={styles.container__carrousel__buttons__button}
-            icon={faChevronRight}
-            onClick={() => setCurrentIndex(currentIndex + 1)}
-          />
-        </div>
+        {logement.pictures.length > 1 && (
+          <div className={styles.container__carrousel__buttons}>
+            <FontAwesomeIcon
+              className={styles.container__carrousel__buttons__button}
+              icon={faChevronLeft}
+              onClick={() => setCurrentIndex(currentIndex - 1)}
+            />
+            <FontAwesomeIcon
+              className={styles.container__carrousel__buttons__button}
+              icon={faChevronRight}
+              onClick={() => setCurrentIndex(currentIndex + 1)}
+            />
+          </div>
+        )}
       </div>
       <div className={styles.container__info}>
         <div className={styles.container__info__base}>
